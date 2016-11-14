@@ -57,7 +57,7 @@
 
 			</div>
 		</section>
-		<section class="main">
+		<section class="main" style="height:2500px;">
 			<div class="content"></div>
 		</section>
 		<footer>
@@ -107,8 +107,30 @@
 			</div>
 		</footer>
 		<div id="sidebar">
-			<a class="toTop" title="返回顶部" href="javascript:scroll(0,0)">返回顶部</a>
+			<a class="toTop" title="返回顶部"><span></span></a>
+			 <!-- href="javascript:scroll(0,0)" -->
 		</div>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript">
+			$.fn.rocket = function() {
+				var $this = this;
+				$('body').scroll(function() {
+					if($("body").scrollTop() < $(window).height()) {
+						$this.fadeOut();
+					} else {
+						$this.fadeIn();
+					}
+				})
+				this.click(function() {
+					$("body").animate({
+						scrollTop: 0
+					})
+				})
+			}
+			$('.toTop').rocket();
+			
+		</script>
 	</body>
 
 </html>
