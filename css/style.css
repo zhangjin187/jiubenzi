@@ -29,7 +29,9 @@ menu {
 	padding: 0;
 	font-family: FZLanTingHei-L-GBK, GothamBook, helvetica, arial, "Microsoft Yahei", "微软雅黑", sans-serif
 }
-
+*{
+	box-sizing: border-box;
+}
 html,
 body,
 fieldset,
@@ -78,7 +80,9 @@ textarea {
 	overflow: auto;
 	resize: none
 }
-
+input{
+	outline:none;
+}
 label,
 summary {
 	cursor: default
@@ -114,12 +118,6 @@ a:hover {
 	text-decoration: none
 }
 
-html {
-	overflow-y: hidden;
-	overflow-x: hidden;
-	min-width: 960px
-}
-
 body,
 html {
 	max-width: 100%;
@@ -131,21 +129,6 @@ html {
 	user-select: none
 }
 
-body {
-	opacity: 0;
-	display: none
-}
-
-body>div {
-	width: 100%;
-	margin: 0 auto;
-	text-align: center
-}
-
-.content {
-	min-height: 30px;
-	margin: 0 auto
-}
 
 .l,
 .left {
@@ -157,13 +140,9 @@ body>div {
 	float: right
 }
 
-.mainbox,
-.mainbox>div {
-	height: 100%;
-	width: 100%
-}
+
 
 .content {
-	width: 960px;
-	min-height: 30px
+	width: 1000px;
+	margin: 0 auto
 }
