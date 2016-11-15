@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/footer.css" />
 		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
-		<link rel="stylesheet" type="text/css" href="css/banner.css"/>
+		<link rel="stylesheet" type="text/css" href="css/personal-hub.css"/>
 		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
 	</head>
 
@@ -34,37 +34,51 @@
 				</div>
 			</div>
 		</header>
-		<section class="login-window">
-			<section class="wrap">
-				<section class="login-box">
-					<section class="top-bar">
-						<h3>欢迎登录旧本子系统</h3>
-						<i class="iconfont r">&#xe6cc;</i>
-					</section>
-					<section class="input-area">
-						<i class="iconfont user-icon">&#xe60f;</i>
-						<i class="iconfont lock-icon">&#xe632;</i>
-						<input type="text" name="user" id="user" value="" placeholder="请输入用户名" />
-						<input type="passport" name="pwd" id="pwd" value="" placeholder="请输入密码"/>
-						<a href="###" class="r">登录遇到问题</a>
-						<input type="button" name="submit" id="submit" value="登录" />
-						<a href="###" class="r">立即注册>></a>
-					</section>
-				</section>
-			</section>
-		</section>
-		<section class="banner">
-			<div class="content">
-				<div class="intr">
-					<h2>旧本子系统</h2>
-					<p>你的智能管家<br />贴心的汽修管理软件</p>
-				</div>
-			</div>
-		</section>
-		<section class="main">
-			<div class="content">
-				
-			</div>
+		<section class="personal-hub">
+	<div class="content">		<section class="menu">
+					<ul class="service">
+						<h2>产品与服务</h2>
+						<li>
+							<p>维修信息</p>
+							<ul>
+								<li>查看维修记录</li>
+								<li>添加维修条目</li>
+								<li>修改维修条目</li>
+							</ul>
+						</li>
+						<li>
+							<p>订单信息</p>
+							<ul>
+								<li>查看订单信息</li>
+								<li>增加订单信息</li>
+							</ul>
+						</li>
+						<li>
+							<p>库存信息</p>
+							<ul>
+								<li>查看库存信息</li>
+								<li>增加库存信息</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="user-hub">
+						<h2>用户中心</h2>
+						<li>
+							<p>员工管理</p>
+							<ul>
+							<li>查看员工信息</li>
+								<li>添加员工</li>
+							</ul>
+						</li>
+						<li>
+							<p>客户管理</p>
+							<ul>
+								<li>查看员工信息</li>
+								<li>添加员工</li>
+							</ul>
+						</li>
+					</ul>
+				</section></div>
 		</section>
 		<footer>
 
@@ -135,8 +149,16 @@
 				})
 			}
 			$('.toTop').rocket();
-			
+			$.fn.accordion = function(obj) {
+					var open = obj.open;
+					this.children().click(function() {
+						$(this).addClass(open).siblings().removeClass(open);
+						return this;
+					})
+				}
+			$(".service,.user-hub").accordion({open:"open"})
 		</script>
 	</body>
 
 </html>
+
