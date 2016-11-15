@@ -80,6 +80,12 @@ textarea {
 	resize: none
 }
 
+input{
+	outline:none;
+}
+
+
+
 label,
 summary {
 	cursor: default
@@ -111,32 +117,26 @@ ins,
 u,
 s,
 a,
-a:hover {
+a:hover{
 	text-decoration: none
 }
 
-html {
-
-}
 
 body,
 html {
 	max-width: 100%;
 	height: 100%;
 	position: relative;
-	user-select: none;
-	-o-user-select: none;
+
 	-ms-user-select: none;
-	-webkit-user-select: none
+	-o-user-select: none;
+	-webkit-user-select: none;
+	user-select: none
 }
 
-body {
 
-}
 
-body>div {
-	
-}
+
 
 .l,
 .left {
@@ -148,7 +148,11 @@ body>div {
 	float: right
 }
 
+
+
+
 .content {
 	width: 1000px;
-	margin: 0 auto;
+	margin: 0 auto
+
 }
