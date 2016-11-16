@@ -94,10 +94,11 @@ $('table input[name=submit]').click(function(){
 	checkbox = $('table input[name=checked]').prop('checked')
 	// console.log(checkbox)
 	password1 = ($('table input[name=password1]').val() == $('table input[name=password]').val());
-	console.log(password1)
+	// console.log(password1)
 	if(username && phonenumber && verificationcode && password && password1 && checkbox){
 		console.log('success')
 	}
+	testpost()
 })
 
 // 显示服务条款
@@ -107,3 +108,54 @@ $('.register-main td>p>span').click(function(){
 })
 
 
+
+
+
+
+// function testpost(){
+// 	$.ajax({ type : 'post',
+// 		dataType : 'json',
+// 		url :'http://139.129.222.154:8080/car/app/car/factory/queryRepareTypeList.do', data: 'mobile=183&password=qqq',
+// 		success : function(data){
+// 			console.log(data);
+// 		},
+// 		error : function(data){
+// 			console.log(data);
+// 		}
+// 	})
+// }
+
+/* test */
+function testpost(){
+	var postData = {
+	    "mobile": "183",
+	    "password": "001"};
+	 
+	postData = (function(obj){ // 转成post需要的字符串.
+	    var str = "";
+	 
+	    for(var prop in obj){
+	        str += prop + "=" + obj[prop] + "&"
+	    }
+	    return str;
+	})(postData);
+	 
+	var xhr = new XMLHttpRequest();
+	 
+	xhr.open("POST", 'http://139.129.222.154:8080/car/app/car/factory/queryRepareTypeList.do', true);
+	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xhr.send(postData);
+	xhr.onreadystatechange = function(){
+	    var XMLHttpReq = xhr;
+
+	    console.log(XMLHttpReq.readyState,XMLHttpReq.status)
+	    if (XMLHttpReq.readyState == 4) {
+	    	console.log()
+	        if (XMLHttpReq.status == 200) {
+	            var text = XMLHttpReq.responseText;
+	 
+	            console.log(text);
+	        }
+	    }
+	};
+}
