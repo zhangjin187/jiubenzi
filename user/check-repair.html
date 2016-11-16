@@ -11,19 +11,19 @@
 					<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
 					<link rel="stylesheet" type="text/css" href="css/ie8.css"/>
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="css/header.css"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/footer.css" />
-		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
-		<link rel="stylesheet" type="text/css" href="css/personal-hub.css"/>
-		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="../css/personal-hub.css"/>
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 	</head>
 	<body>
 		<header>
 			<div class="content clearfix">
 				<a href="index.html">
 					<div class="logo l">
-					<img src="img/书.png"  class="l"/>
+					<img src="../img/书.png"  class="l"/>
 					<h1>旧本子</h1>
 				</div>
 				</a>
@@ -40,23 +40,23 @@
 						<li>
 							<p>维修信息</p>
 							<ul>
-								<li>查看维修记录</li>
-								<li>添加维修条目</li>
-								<li>修改维修条目</li>
+								<li><a href="check-repair.html">查看维修记录</a></li>
+								<li><a href="add-repair.html">添加维修条目</a></li>
+								<li><a href="change-repair.html">修改维修条目</a></li>
 							</ul>
 						</li>
 						<li>
 							<p>订单信息</p>
 							<ul>
-								<li>查看订单信息</li>
-								<li>增加订单信息</li>
+								<li><a href="check-order.html">查看订单信息</a></li>
+								<li><a href="add-order.html">添加订单信息</a></li>
 							</ul>
 						</li>
 						<li>
 							<p>库存信息</p>
 							<ul>
-								<li>查看库存信息</li>
-								<li>增加库存信息</li>
+								<li><a href="check-store.html">查看库存信息</a></li>
+								<li><a href="add-store.html">添加库存信息</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -65,15 +65,15 @@
 						<li>
 							<p>员工管理</p>
 							<ul>
-							<li>查看员工信息</li>
-								<li>添加员工</li>
+							<li><a href="check-staff.html">查看员工信息</a></li>
+								<li><a href="change-staff.html">修改员工信息</a></li>
 							</ul>
 						</li>
 						<li>
 							<p>客户管理</p>
 							<ul>
-								<li>查看员工信息</li>
-								<li>添加员工</li>
+								<li><a href="check-customer.html">查看客户信息</a></li>
+								<li><a href="change-customer.html">修改客户信息</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -129,34 +129,34 @@
 			<div class="toTop" title="返回顶部"><p></p></div>
 			 
 		</div>
-		<script type="text/javascript" src="js/jQuery.js"></script>
-		<script type="text/javascript" src="js/login.js"></script>
-		<script type="text/javascript">
-			$.fn.rocket = function() {
-				var $this = this;
-				$(document).scroll(function() {
-					if($("body").scrollTop() < $(window).height()-500) {
-						$this.fadeOut();
-					} else {
-						$this.fadeIn();
-					}
-				})
-				this.click(function() {
-					$("body").animate({
-						scrollTop: 0
-					})
-				})
-			}
-			$('.toTop').rocket();
-			$.fn.accordion = function(obj) {
-					var open = obj.open;
-					this.children().click(function() {
-						$(this).addClass(open).siblings().removeClass(open);
-						return this;
-					})
-				}
-			$(".service,.user-hub").accordion({open:"open"})
-		</script>
+		<script type="text/javascript" src="../js/jQuery.js"></script>
+		<script type="text/javascript" src="../js/login.js"></script>
+		<script type="text/javascript">$.fn.rocket = function() {
+	var $this = this;
+	$(document).scroll(function() {
+		if($("body").scrollTop() < $(window).height() - 500) {
+			$this.fadeOut();
+		} else {
+			$this.fadeIn();
+		}
+	})
+	this.click(function() {
+		$("body").animate({
+			scrollTop: 0
+		})
+	})
+}
+$('.toTop').rocket();
+$.fn.accordion = function(obj) {
+	var open = obj.open;
+	this.children().click(function() {
+		$(this).addClass(open).siblings().removeClass(open);
+		return this;
+	})
+}
+$(".service,.user-hub").accordion({
+	open: "open"
+})</script>
 	</body>
 
 </html>
