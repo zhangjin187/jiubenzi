@@ -17,6 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/check-order.css"/>
 	</head>
 
 	<body>
@@ -40,10 +41,10 @@
 				<section class="menu l">
 					<ul class="service">
 						<h2>产品与服务</h2>
-						<li class="open">
+						<li>
 							<p>维修信息</p>
 							<ul>
-								<li class="active">
+								<li>
 									<a href="check-repair.html">查看维修记录</a>
 								</li>
 								<li>
@@ -51,10 +52,10 @@
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li class="open">
 							<p>订单信息</p>
 							<ul>
-								<li>
+								<li class="active">
 									<a href="check-order.html">查看订单信息</a>
 								</li>
 								<li>
@@ -101,8 +102,23 @@
 					</ul>
 				</section>
 				<!--查看维修记录-->
-				<section class="wrap check-repair l">
-
+				<section class="wrap add-order l">
+					<table border="1" cellpadding="20">
+						<tr>
+							<th>订单时间</th>
+							<th>客户姓名</th>
+							<th>预约项目</th>
+							<th>修理工人</th>
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><a href="#">确定</a></td>
+						</tr>
+					</table>
 				</section>
 			</div>
 		</section>

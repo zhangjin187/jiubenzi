@@ -24,6 +24,6 @@ $.fn.accordion = function(obj) {
 $(".service,.user-hub").accordion({
 	open: "open"
 })
-$(".service>li li,.user-hub>li li").hover(function(){
-		$(this).addClass("active").siblings().removeClass("active")
-})
+//$(".service>li li,.user-hub>li li").hover(function(){
+//		$(this).addClass("active").siblings().removeClass("active")
+//})
