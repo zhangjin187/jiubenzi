@@ -29,33 +29,32 @@
 					<h1>旧本子</h1>
 				</div>
 				</a>
-				
 				<div class="login login-befor r">
 					<a class="loginAddr" href="###">登录</a><a href="register.html">注册</a>
 				</div>
 				<div class="login login-after hide r">
-						<span>后台管理 ↓</span>
-						<div class="login-list">
-							<div class="login-list-top">
-								<h3>产品与服务</h3>
-								<ul>
-									<li><a href="user.html">维修信息</a></li>
-									<li><a href="user.html">订单信息</a></li>
-									<li><a href="user.html">库存信息</a></li>
-								</ul>
-							</div>
-							<div class="login-list-manage">
-								<h3>用户中心</h3>
-								<ul>
-									<li><a href="user.html">员工管理</a></li>
-									<li><a href="user.html">客户管理</a></li>
-									<!-- <li><a href="user.html">退出</a></li> -->
-								</ul>
-							</div>
-							<div class="login-list-bottom">
-								<h3><a class="login-out" href="#">退出</a></h3>
-							</div>
+					<span>后台管理 ↓</span>
+					<div class="login-list">
+						<div class="login-list-top">
+							<h3>产品与服务</h3>
+							<ul>
+								<li><a href="user/check-repair.html">维修信息</a></li>
+								<li><a href="user.html">订单信息</a></li>
+								<li><a href="user.html">库存信息</a></li>
+							</ul>
 						</div>
+						<div class="login-list-manage">
+							<h3>用户中心</h3>
+							<ul>
+								<li><a href="user.html">员工管理</a></li>
+								<li><a href="user.html">客户管理</a></li>
+								<!-- <li><a href="user.html">退出</a></li> -->
+							</ul>
+						</div>
+						<div class="login-list-bottom">
+							<h3><a class="login-out" href="#">退出</a></h3>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -87,6 +86,7 @@
 			</div>
 		</section>
 		<section class="main" style="height:300px;">
+
 			<div class="content" style="background:#aaa;height:100%;margin-top: 20px;">
 				
 			</div>
@@ -143,25 +143,6 @@
 		</div>
 		<script type="text/javascript" src="js/jQuery.js"></script>
 		<script type="text/javascript" src="js/login.js"></script>
-		<script type="text/javascript">
-			$.fn.rocket = function() {
-				var $this = this;
-				$(document).scroll(function() {
-					if($("body").scrollTop() < $(window).height()-500) {
-						$this.fadeOut();
-					} else {
-						$this.fadeIn();
-					}
-				})
-				this.click(function() {
-					$("body").animate({
-						scrollTop: 0
-					})
-				})
-			}
-			$('.toTop').rocket();
-			
-		</script>
 	</body>
 
 </html>
