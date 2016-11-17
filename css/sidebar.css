@@ -6,6 +6,7 @@
 	right: 20px;
 	bottom: 10%;
 }
+
 #sidebar .toTop{
 	display: none;
 	position: relative;
@@ -21,6 +22,7 @@
 	background-color: #999;
 	transition: all .3s;
 }
+
 #sidebar p{
 	display: inline-block;
 	border-width: 15px;
@@ -35,4 +37,5 @@
 	margin-left:-15px;
 	margin-top:-22px;
 }
+
 

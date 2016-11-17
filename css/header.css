@@ -17,11 +17,14 @@ header{
 	line-height: 60px;
 	margin-left:70px;
 }
-.login a:nth-child(1){
+.login>a:nth-child(1){
 	border-right:1px solid #000000;
 	
 }
-.login a{
+.login.hide{
+	display: none;
+}
+.login>a{
 	font-size:18px;
 	display: inline-block;
 	margin-top:22px;
@@ -29,6 +32,69 @@ header{
 	height:18px;
 	line-height:20px;
 }
+.login-after{
+	/*display: none;*/
+	font-size:18px;
+	height: 60px;
+	width: 120px;
+	text-align: center;
+	line-height:60px;
+	position: relative;
+	background: #ca7;
+}
+
+.login-after span{
+
+}
+
+.login .login-list{
+	/*display: none;*/
+	position: absolute;
+	/*padding-top: 10px;*/
+	text-align: left;
+	top: 58px;
+	left: 0;
+	width: 120px;
+	background: #ccc;
+	padding: 0 0 0 16px ;
+	z-index: 9;
+	height: 0;
+	overflow: hidden;
+	line-height: 24px;
+	font-size: 16px;
+	-webkit-transition: height .3s;
+	-moz-transition: height .3s;
+	-ms-transition: height .3s;
+	-o-transition: height .3s;
+	transition: height .3s;
+}
+
+.login:hover .login-list{
+	/*display: block;*/
+	height: 240px;
+}
+
+
+.login .login-list h3{
+	height: 28px;
+	margin-top: 10px;
+	line-height: 30px;
+}
+
+.login .login-list li {
+	height: 24px;
+	text-align: left;
+}
+
+.login .login-list li a{
+	text-align: left;
+	font-size: 14px;
+}
+
+
+
+
+
 .login a:hover{
 	color:#ca7;
 }
@@ -110,6 +176,17 @@ header{
 .input-area a{
 	font-size:13px;
 	color:#ca7;
+}
+
+.input-area p>span{
+	color: #f26;
+	display: none;
+	font-size:13px;
+	padding-left: 10px;
+}
+
+.input-area p>span.error{
+	display: inline-block;
 }
 #submit:hover{
 	opacity:.9;
