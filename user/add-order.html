@@ -18,6 +18,8 @@
 		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="css/check-order.css"/>
+		<link type="text/css" rel="stylesheet" href="jedate/skin/jedate.css">
+
 	</head>
 
 	<body>
@@ -75,10 +77,10 @@
 						<li class="open">
 							<p>订单信息</p>
 							<ul>
-								<li class="active">
+								<li>
 									<a href="check-order.html">查看订单信息</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="add-order.html">添加订单信息</a>
 								</li>
 							</ul>
@@ -132,11 +134,11 @@
 							<th>操作</th>
 						</tr>
 						<tr>
-							<td><input type="text" /></td>
-							<td><input type="text" /></td>
-							<td><input type="text" /></td>
-							<td><input type="text" /></td>
-							<td><a href="#">确定</a></td>
+							<td class="order-date"><input type="text" id="dateinfo" readonly/></td>
+							<td class="order-customer"><input type="text" /></td>
+							<td class="order-list"><input type="text" /></td>
+							<td class="order-repairer"><input type="text" /></td>
+							<td><button class="confirm">确定</button></td>
 						</tr>
 					</table>
 				</section>
@@ -205,9 +207,10 @@
 
 		</div>
 		<script type="text/javascript" src="../js/jQuery.js"></script>
+		<script type="text/javascript" src="jedate/jquery.jedate.min.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
-		<script type="text/javascript" src="js/user.js"></script>
+		   <script type="text/javascript" src="js/add-order.js"></script>
 	</body>
 
 </html>
