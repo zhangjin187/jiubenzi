@@ -16,8 +16,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
 		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
-		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="css/repair.css" />
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 	</head>
 
 	<body>
@@ -29,7 +29,6 @@
 						<h1>旧本子</h1>
 					</div>
 				</a>
-
 
 				<div class="login login-after r">
 					<span>后台管理 ↓</span>
@@ -62,13 +61,13 @@
 				<section class="menu l">
 					<ul class="service">
 						<h2>产品与服务</h2>
-						<li class="open">
+						<li>
 							<p>维修信息</p>
 							<ul>
 								<li>
 									<a href="check-repair.html">查看维修记录</a>
 								</li>
-								<li class="active">
+								<li>
 									<a href="add-repair.html">添加维修条目</a>
 								</li>
 							</ul>
@@ -84,10 +83,10 @@
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li class="open">
 							<p>库存信息</p>
 							<ul>
-								<li>
+								<li class="active">
 									<a href="check-store.html">查看库存信息</a>
 								</li>
 								<li>
@@ -122,68 +121,61 @@
 						</li>
 					</ul>
 				</section>
-				
-				<!--添加维修记录-->
-				<section class="wrap add-repair l">
-					<h3>添加维修记录</h3>
-					<div class="add-table">
+				<!--查看维修记录-->
+				<section class="wrap check-repair l">
+					<h3>库存信息</h3>
+					<div class="check-table">
 						<table border="1">
-							<tr>
-								<!-- <th>时间</th> -->
-								<th>客户</th>
-								<th>修理类型</th>
-								<th>费用(元)</th>
-								<th>修理人</th>
-								<th>操作</th>
-								<!-- <th>查看详情</th> -->
-								<!-- <th></th> -->
-							</tr>
-							<tr>
-								<!-- <td>2016/11/15/18:16</td> -->
-								<td><input placeholder="输入客户信息" type="text"></td>
-								<td class="td-ul">
-									<ul class="add-repair-ul">
-										<li><span>修轮胎</span><input class="del-repair-type r" type="button" value="删除" /></li>
-										
-									</ul>
-									<p>
-										<input type="text" placeholder="输入修理类型" list="repair-type">
-										<datalist id="repair-type">
-											<option>修车等</option>
-											<option>发动机</option>
-											<option>14</option>
-											<option>15</option>
-										</datalist>
-										<input class="add-repair-type r" type="button" value="添加" />
-									</p>
-								</td>
-								<td>
-									<input placeholder="本次金额" type="text">
-								</td>
-								<td>
-									<input placeholder="修理人" type="text">
-									<datalist id="repair-type">
-										<option>老张</option>
-										<option>老李</option>
-										<option>老王</option>
-										<option>老赵</option>
-									</datalist>
-								</td>
-								<td title="">
-									<!-- <p><button class="detail-repair-info">详情</button></p> -->
-									<p><button class="no-add">放弃</button></p>
-									<p><button class="add-info">保存</button></p>
-								</td>
-								<!-- <td><a href="#">详情</a></td> -->
-								<!-- <td></td> -->
-							</tr>
+							<thead>
+								<tr>
+									<th>零件名称</th>
+									<th>时间</th>
+									<th>使用位置</th>
+									<th>费用(元)</th>
+									<th>订购电话</th>
+									<th>操作</th>
+									<!-- <th>查看详情</th> -->
+									<!-- <th></th> -->
+								</tr>
+							</thead>
+							<tbody>
+								<tr title="点击查看详情">
+									<td>zzzzz</td>
+									<td>2016/11/15/18:16</td>
+									<td>
+										<ul>
+											<li>修理轮胎</li>
+											<li>修理车灯</li>
+											<li>修理发动机</li>
+											<li>修理轮胎</li>
+										</ul>
+									</td>
+									<td>600</td>
+									<td>5654987841</td>
+									<td title="">
+										<p><button class="change-repair-info">更改</button></p>
+										<p><button class="del-repair-info">删除</button></p>
+									</td>
+								</tr>
+							</tbody>
+								
+
 						</table>
+						<p class="pagechange">
+							<b class="first">首页</b>
+							<b class="prev">上一页</b>
+							<span class="pagenum">
+								<a class="checked">1</a>
+								<a>2</a>
+								<a>3</a>
+							</span>
+							<b class="next">下一页</b>
+							<b class="end">尾页</b>
+						</p>
 					</div>
 				</section>
 			</div>
-
 		</section>
-
 		<footer>
 
 			<div class="content">
@@ -249,7 +241,6 @@
 		<script type="text/javascript" src="../js/jQuery.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
-		<script type="text/javascript" src="js/add-repair.js"></script>
 	</body>
 
 </html>

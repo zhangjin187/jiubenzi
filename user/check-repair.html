@@ -23,16 +23,36 @@
 	<body>
 		<header>
 			<div class="content clearfix">
-				<a href="index.html">
+				<a href="../index.html">
 					<div class="logo l">
 						<img src="../img/书.png" class="l" />
 						<h1>旧本子</h1>
 					</div>
 				</a>
 
-				<div class="login r">
-					<a class="loginAddr" href="###">登录</a>
-					<a href="../register.html">注册</a>
+				<div class="login login-after r">
+					<span>后台管理 ↓</span>
+					<div class="login-list">
+						<div class="login-list-top">
+							<h3>产品与服务</h3>
+							<ul>
+								<li><a href="check-repair.html">维修信息</a></li>
+								<li><a href="check-order.html">订单信息</a></li>
+								<li><a href="check-store.html">库存信息</a></li>
+							</ul>
+						</div>
+						<div class="login-list-manage">
+							<h3>用户中心</h3>
+							<ul>
+								<li><a href="check-staff.html">员工管理</a></li>
+								<li><a href="check-customer.html">客户管理</a></li>
+								<!-- <li><a href="user.html">退出</a></li> -->
+							</ul>
+						</div>
+						<div class="login-list-bottom">
+							<h3><a class="login-out" href="#">退出</a></h3>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -84,7 +104,7 @@
 									<a href="check-staff.html">查看员工信息</a>
 								</li>
 								<li>
-									<a href="change-staff.html">修改员工信息</a>
+									<a href="add-staff.html">添加员工信息</a>
 								</li>
 							</ul>
 						</li>
@@ -95,7 +115,7 @@
 									<a href="check-customer.html">查看客户信息</a>
 								</li>
 								<li>
-									<a href="change-customer.html">修改客户信息</a>
+									<a href="add-customer.html">添加客户信息</a>
 								</li>
 							</ul>
 						</li>
@@ -106,6 +126,7 @@
 					<h3>维修记录</h3>
 					<div class="check-table">
 						<table border="1">
+						<thead>
 							<tr>
 								<th>时间</th>
 								<th>客户姓名</th>
@@ -116,10 +137,12 @@
 								<!-- <th>查看详情</th> -->
 								<!-- <th></th> -->
 							</tr>
+						</thead>
+						<tbody>
 							<tr title="点击查看详情">
 								<td>2016/11/15/18:16</td>
 								<td>zzzzz</td>
-								<td>
+								<td class="td-ul">
 									<ul>
 										<li>修理轮胎</li>
 										<li>修理车灯</li>
@@ -305,7 +328,22 @@
 								<!-- <td><a href="#">详情</a></td> -->
 								<!-- <td></td> -->
 							</tr>
+						</tbody>
+							
+
 						</table>
+						<div style="height:1px;width:100%"></div>
+						<p class="pagechange">
+							<b class="first">首页</b>
+							<b class="prev">上一页</b>
+							<span class="pagenum">
+								<a class="checked">1</a>
+								<a>2</a>
+								<a>3</a>
+							</span>
+							<b class="next">下一页</b>
+							<b class="end">尾页</b>
+						</p>
 					</div>
 				</section>
 			</div>
@@ -319,10 +357,10 @@
 							<h4>关于我们</h4>
 							<ul>
 								<li>
-									<a href="#">公司介绍</a>
+									<a href="../about.html">公司介绍</a>
 								</li>
 								<li>
-									<a href="#">联系方式</a>
+									<a href="../about.html">联系方式</a>
 								</li>
 								<li>
 									<a href="mailto:">邮箱</a>
@@ -333,10 +371,10 @@
 							<h4>商务合作</h4>
 							<ul>
 								<li>
-									<a href="../about.html">法律声明</a>
+									<a href="#">法律声明</a>
 								</li>
 								<li>
-									<a href="../about.html">免责条款</a>
+									<a href="#">免责条款</a>
 								</li>
 								<li></li>
 							</ul>
@@ -375,7 +413,7 @@
 		<script type="text/javascript" src="../js/jQuery.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
-		<script type="text/javascript" src="js/user.js"></script>
+		<script type="text/javascript" src="js/repair-changepage.js"></script>
 	</body>
 
 </html>

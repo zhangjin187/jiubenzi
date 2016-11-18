@@ -45,9 +45,9 @@ $('.login-out').click(function(){
 	if(1){
 		$('.login-befor').removeClass('hide');
 		$('.login-after').addClass('hide');
-		window.location.reload();
+		// window.location.reload();
 		document.cookie="name="+'031488';
-		delAllCookie();
+		// delAllCookie();
 	}
 })
 function delAllCookie(){    
