@@ -129,7 +129,11 @@ $('.register-main td>p>span').click(function(){
 function testpost(){
 	var postData = {
 	    "mobile": "183",
-	    "password": "001"};
+	    "password": "001",
+	    'factoryId': '1',
+	    'pageSize' : '10',
+	    'pageNo' : '1'
+	};
 	 
 	postData = (function(obj){ // 转成post需要的字符串.
 	    var str = "";
@@ -148,13 +152,13 @@ function testpost(){
 	xhr.onreadystatechange = function(){
 	    var XMLHttpReq = xhr;
 
-	    console.log(XMLHttpReq.readyState,XMLHttpReq.status)
+	    // console.log(XMLHttpReq.readyState,XMLHttpReq.status)
 	    if (XMLHttpReq.readyState == 4) {
 	    	console.log()
 	        if (XMLHttpReq.status == 200) {
-	            var text = XMLHttpReq.responseText;
+	            var text = JSON.parse(XMLHttpReq.responseText);
 	 
-	            console.log(text);
+	            console.log(text.data);
 	        }
 	    }
 	};
