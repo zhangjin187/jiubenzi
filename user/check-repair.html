@@ -104,7 +104,7 @@
 									<a href="check-staff.html">查看员工信息</a>
 								</li>
 								<li>
-									<a href="change-staff.html">修改员工信息</a>
+									<a href="add-staff.html">添加员工信息</a>
 								</li>
 							</ul>
 						</li>
@@ -115,7 +115,7 @@
 									<a href="check-customer.html">查看客户信息</a>
 								</li>
 								<li>
-									<a href="change-customer.html">修改客户信息</a>
+									<a href="add-customer.html">添加客户信息</a>
 								</li>
 							</ul>
 						</li>
@@ -126,6 +126,7 @@
 					<h3>维修记录</h3>
 					<div class="check-table">
 						<table border="1">
+						<thead>
 							<tr>
 								<th>时间</th>
 								<th>客户姓名</th>
@@ -136,10 +137,12 @@
 								<!-- <th>查看详情</th> -->
 								<!-- <th></th> -->
 							</tr>
+						</thead>
+						<tbody>
 							<tr title="点击查看详情">
 								<td>2016/11/15/18:16</td>
 								<td>zzzzz</td>
-								<td>
+								<td class="td-ul">
 									<ul>
 										<li>修理轮胎</li>
 										<li>修理车灯</li>
@@ -325,7 +328,22 @@
 								<!-- <td><a href="#">详情</a></td> -->
 								<!-- <td></td> -->
 							</tr>
+						</tbody>
+							
+
 						</table>
+						<div style="height:1px;width:100%"></div>
+						<p class="pagechange">
+							<b class="first">首页</b>
+							<b class="prev">上一页</b>
+							<span class="pagenum">
+								<a class="checked">1</a>
+								<a>2</a>
+								<a>3</a>
+							</span>
+							<b class="next">下一页</b>
+							<b class="end">尾页</b>
+						</p>
 					</div>
 				</section>
 			</div>
@@ -395,7 +413,7 @@
 		<script type="text/javascript" src="../js/jQuery.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
-		<script type="text/javascript" src="js/user.js"></script>
+		<script type="text/javascript" src="js/repair-changepage.js"></script>
 	</body>
 
 </html>
