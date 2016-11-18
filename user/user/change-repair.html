@@ -17,6 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/check-repair.css" />
 	</head>
 
 	<body>
@@ -31,7 +32,7 @@
 
 				<div class="login r">
 					<a href="###">登录</a>
-					<a href="../register.html">注册</a>
+					<a href="register.html">注册</a>
 				</div>
 			</div>
 		</header>
@@ -40,7 +41,7 @@
 				<section class="menu l">
 					<ul class="service">
 						<h2>产品与服务</h2>
-						<li>
+						<li class="open">
 							<p>维修信息</p>
 							<ul>
 								<li>
@@ -49,7 +50,7 @@
 								<li>
 									<a href="add-repair.html">添加维修条目</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="change-repair.html">修改维修条目</a>
 								</li>
 							</ul>
@@ -103,10 +104,15 @@
 						</li>
 					</ul>
 				</section>
+				
 				<!--查看维修记录-->
-				<section class="wrap check-repair l"></section>
+				<section class="wrap check-repair l">
+						
+				</section>
 			</div>
+
 		</section>
+
 		<footer>
 
 			<div class="content">
@@ -171,34 +177,7 @@
 		</div>
 		<script type="text/javascript" src="../js/jQuery.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
-		<script type="text/javascript">
-			$.fn.rocket = function() {
-				var $this = this;
-				$(document).scroll(function() {
-					if($("body").scrollTop() < $(window).height() - 500) {
-						$this.fadeOut();
-					} else {
-						$this.fadeIn();
-					}
-				})
-				this.click(function() {
-					$("body").animate({
-						scrollTop: 0
-					})
-				})
-			}
-			$('.toTop').rocket();
-			$.fn.accordion = function(obj) {
-				var open = obj.open;
-				this.children().click(function() {
-					$(this).addClass(open).siblings().removeClass(open);
-					return this;
-				})
-			}
-			$(".service,.user-hub").accordion({
-				open: "open"
-			})
-		</script>
+		<script type="text/javascript" src="js/user.js"></script>
 	</body>
 
 </html>
