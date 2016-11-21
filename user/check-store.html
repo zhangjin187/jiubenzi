@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="keywords" content="旧本子汽车维修查询服务，汽车维修记录查询，维修，汽车，旧本子" />
@@ -8,15 +7,15 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>旧本子汽车维修查询服务</title>
 		<!--[if IE]>
-					<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
-					<link rel="stylesheet" type="text/css" href="css/ie8.css"/>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+			<link rel="stylesheet" type="text/css" href="css/ie8.css"/>
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="../css/header.css" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css" />
 		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
 		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
-		<link rel="stylesheet" type="text/css" href="css/repair.css" />
+		<link rel="stylesheet" type="text/css" href="css/store.css" />
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 	</head>
 
@@ -122,7 +121,7 @@
 					</ul>
 				</section>
 				<!--查看维修记录-->
-				<section class="wrap check-repair l">
+				<section class="wrap check-store l">
 					<h3>库存信息</h3>
 					<div class="check-table">
 						<table border="1">
@@ -130,16 +129,16 @@
 								<tr>
 									<th>零件名称</th>
 									<th>时间</th>
-									<th>使用位置</th>
-									<th>费用(元)</th>
-									<th>订购电话</th>
+									<th>成本价(元)</th>
+									<th>售价(元)</th>
+									<th>库存量</th>
+									<th>备注</th>
 									<th>操作</th>
-									<!-- <th>查看详情</th> -->
 									<!-- <th></th> -->
 								</tr>
 							</thead>
 							<tbody>
-								<tr title="点击查看详情">
+								<!-- <tr title="点击查看详情">
 									<td>zzzzz</td>
 									<td>2016/11/15/18:16</td>
 									<td>
@@ -153,25 +152,15 @@
 									<td>600</td>
 									<td>5654987841</td>
 									<td title="">
-										<p><button class="change-repair-info">更改</button></p>
-										<p><button class="del-repair-info">删除</button></p>
+										<p><button class="change-store-info">更改</button></p>
+										<p><button class="del-store-info">删除</button></p>
 									</td>
-								</tr>
+								</tr> -->
 							</tbody>
 								
 
 						</table>
-						<p class="pagechange">
-							<b class="first">首页</b>
-							<b class="prev">上一页</b>
-							<span class="pagenum">
-								<a class="checked">1</a>
-								<a>2</a>
-								<a>3</a>
-							</span>
-							<b class="next">下一页</b>
-							<b class="end">尾页</b>
-						</p>
+						
 					</div>
 				</section>
 			</div>
@@ -241,6 +230,7 @@
 		<script type="text/javascript" src="../js/jQuery.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
+		<script type="text/javascript" src="js/store.js"></script>
 	</body>
 
 </html>

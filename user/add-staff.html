@@ -17,7 +17,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
-		<link rel="stylesheet" type="text/css" href="css/repair.css" />
+		<link rel="stylesheet" type="text/css" href="css/staff.css" />
+		<link type="text/css" rel="stylesheet" href="jedate/skin/jedate.css">
 	</head>
 
 	<body>
@@ -124,14 +125,14 @@
 				</section>
 				
 				<!--添加维修记录-->
-				<section class="wrap add-repair l">
+				<section class="wrap add-staff l">
 					<h3>添加员工信息</h3>
 					<div class="add-table">
 						<table border="1">
 							<tr>
 								<th>名字</th>
-								<th>时间</th>
-								<th>修理类型</th>
+								<th>入职时间</th>
+								<!-- <th>修理类型</th> -->
 								<!-- <th>费用(元)</th> -->
 								<th>电话</th>
 								<th>操作</th>
@@ -139,31 +140,30 @@
 								<!-- <th></th> -->
 							</tr>
 							<tr>
-								<td><input placeholder="输入员工名字" type="text"></td>
-								<td>2016/11/15</td>
-								<td class="td-ul">
-									<ul class="add-repair-ul">
-										<!-- <li><span>修轮胎</span><input class="del-repair-type r" type="button" value="删除" /></li> -->
+								<td><input class="staff-name" placeholder="输入员工名字" type="text"></td>
+								<td><input class="time" type="text"></td>
+								<!-- <td class="td-ul">
+									<ul class="add-staff-ul">
 										
 									</ul>
 									<p>
-										<input type="text" placeholder="输入修理类型" list="repair-type">
-										<datalist id="repair-type">
+										<input class="add-staff-ul" type="text" placeholder="输入修理类型" list="staff-type">
+										<datalist id="staff-type">
 											<option>修车等</option>
 											<option>发动机</option>
 											<option>14</option>
 											<option>15</option>
 										</datalist>
-										<input class="add-repair-type r" type="button" value="添加" />
+										<input class="staff-type r" type="button" value="添加" />
 									</p>
-								</td>
+								</td> -->
 								
 								<td>
-									<input placeholder="电话" type="text">
+									<input class="staff-tel" placeholder="电话" type="text">
 								
 								</td>
 								<td title="">
-									<!-- <p><button class="detail-repair-info">详情</button></p> -->
+									<!-- <p><button class="detail-staff-info">详情</button></p> -->
 									<p><button class="no-add">放弃</button></p>
 									<p><button class="add-info">保存</button></p>
 								</td>
@@ -240,9 +240,9 @@
 
 		</div>
 		<script type="text/javascript" src="../js/jQuery.js"></script>
-		<script type="text/javascript" src="../js/login.js"></script>
+		<script type="text/javascript" src="jedate/jquery.jedate.min.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
-		<script type="text/javascript" src="js/add-repair.js"></script>
+		<script type="text/javascript" src="js/add-staff.js"></script>
 	</body>
 
 </html>

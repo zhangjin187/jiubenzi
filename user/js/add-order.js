@@ -1,4 +1,4 @@
-	$(".add-order").find("#dateinfo").jeDate({
+$(".add-order").find("#dateinfo").jeDate({
     format:"YYYY-MM-DD hh:mm",
     isTime:true, 
     minDate:"2016-09-19 00:00:00",
@@ -21,4 +21,3 @@
 		$(".add-order table").append(newTr);
 	}else{alert("请填写完整信息")}
 })
-
