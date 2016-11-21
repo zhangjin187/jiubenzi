@@ -98,7 +98,7 @@ $('table input[name=submit]').click(function(){
 	if(username && phonenumber && verificationcode && password && password1 && checkbox){
 		console.log('success')
 	}
-	testpost()
+	// testpost()
 })
 
 // 显示服务条款
@@ -145,7 +145,6 @@ function testpost(){
 	})(postData);
 	 
 	var xhr = new XMLHttpRequest();
-	 
 	xhr.open("POST", 'http://139.129.222.154:8080/car/app/car/factory/queryRepareTypeList.do', true);
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	xhr.send(postData);

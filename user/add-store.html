@@ -17,7 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="css/personal-hub.css" />
-		<link rel="stylesheet" type="text/css" href="css/repair.css" />
+		<link rel="stylesheet" type="text/css" href="css/store.css" />
 	</head>
 
 	<body>
@@ -124,54 +124,41 @@
 				</section>
 				
 				<!--添加维修记录-->
-				<section class="wrap add-repair l">
+				<section class="wrap add-store l">
 					<h3>添加库存</h3>
 					<div class="add-table">
 						<table border="1">
 							<thead>
 								<tr>
 									<th>零件名称</th>
-									<th>时间</th>
-									<th>使用位置</th>
-									<th>费用(元)</th>
-									<th>订购电话</th>
+									<!-- <th>时间</th> -->
+									<th>成本价(元)</th>
+									<th>售价(元)</th>
+									<th>库存量</th>
+									<th>备注</th>
 									<th>操作</th>
-									<!-- <th>查看详情</th> -->
 									<!-- <th></th> -->
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td><input placeholder="输入员工名字" type="text"></td>
-									<td>2016/11/15</td>
+									<td><input class="name" placeholder="输入名字" type="text"></td>
+									<!-- <td class="time">2016/11/15</td> -->
 									<td class="td-ul">
-										<ul class="add-repair-ul">
-											<!-- <li><span>修轮胎</span><input class="del-repair-type r" type="button" value="删除" /></li> -->
-											
-										</ul>
-										<p>
-											<input type="text" placeholder="输入修理类型" list="repair-type">
-											<datalist id="repair-type">
-												<option>修车等</option>
-												<option>发动机</option>
-												<option>14</option>
-												<option>15</option>
-											</datalist>
-											<input class="add-repair-type r" type="button" value="添加" />
-										</p>
+										<input class="primaryPrice"  placeholder="输入钱数" type="text">
 									</td>
-									
+									<td><input class="salePrice" placeholder="输入钱数" type="text"></td>
 									<td>
-										<input placeholder="电话" type="text">
+										<input class="number" placeholder="库存" type="text">
 									
 									</td>
-									<td title="">
-										<!-- <p><button class="detail-repair-info">详情</button></p> -->
+									<td><input class="memo" type="text"></td>
+									<td>
+										<!-- <p><button class="detail-store-info">详情</button></p> -->
 										<p><button class="no-add">放弃</button></p>
 										<p><button class="add-info">保存</button></p>
 									</td>
 									<!-- <td><a href="#">详情</a></td> -->
-									<!-- <td></td> -->
 								</tr>
 							</tbody>
 								
@@ -247,7 +234,7 @@
 		<script type="text/javascript" src="../js/jQuery.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
-		<script type="text/javascript" src="js/add-repair.js"></script>
+		<script type="text/javascript" src="js/add-store.js"></script>
 	</body>
 
 </html>
