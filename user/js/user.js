@@ -24,9 +24,3 @@ $.fn.accordion = function(obj) {
 $(".service,.user-hub").accordion({
 	open: "open"
 })
-$("#dateinfo").jeDate({
-    format:"YYYY-MM-DD hh:mm",
-    isTime:true, 
-    minDate:"2016-09-19 00:00:00",
-    okfun:function(){return false}
-})
