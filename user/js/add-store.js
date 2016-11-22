@@ -28,26 +28,23 @@ $('.add-info').click(function(){
 function addStore(){
 
 	var postData = {
-		"mobile": "183",
-		"password": "001",
-		'factoryId': '16',
-		'pageSize' : '10',
-		'pageNo' : '1'
+		
 	};
+	postData.factoryId = $.cookie.get('factoryId');
 
 	postData.name = $('.name').val();
 	postData.number = $('.number').val();
 	postData.salePrice = $('.salePrice').val();
 	postData.primaryPrice = $('.primaryPrice').val();
 	postData.memo = $('.memo').val();
-	postData1 = (function(obj){ // 转成post需要的字符串.
-		var str = "";
-		for(var prop in obj){
-		    str += prop + "=" + obj[prop] + "&"
-		}
-		return str;
-	})(postData);
-	$.post( 'http://139.129.222.154:8080/car/app/car/factory/saveRepareFeeItem.do', postData1, function(data){
+	// postData1 = (function(obj){ // 转成post需要的字符串.
+	// 	var str = "";
+	// 	for(var prop in obj){
+	// 	    str += prop + "=" + obj[prop] + "&"
+	// 	}
+	// 	return str;
+	// })(postData);
+	$.post( 'http://139.129.222.154:8080/car/app/car/factory/saveRepareFeeItem.do', postData, function(data){
 		// data = JSON.parse(data)
 		if(!data.code){
 			data = JSON.parse(data)

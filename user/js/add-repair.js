@@ -1,7 +1,5 @@
 // 增加维修类型
 $('.add-repair-type').click(function(){
-	// console.log(1)
-	// console.log($('.add-repair-ul').index($('<li><span>' + $(this).siblings('input').val() + '</span><input class="del-repair-type r" type="button" value="删除" /></li>')))
 	if($(this).siblings('input').val())
 		$('.add-repair-ul').append('<li><span>' + $(this).siblings('input').val() + '</span><input class="del-repair-type r" type="button" value="删除" /></li>');
 	$(this).siblings('input').val('');
@@ -17,7 +15,6 @@ $('.add-repair-ul').on('click', 'input[type=button]', function(){
 $('.no-add').click(function(){
 	// console.log(12)
 	if(confirm('是否放弃')){
-		// console.log(1)
 		window.history.back(-1);
 	}else{
 
@@ -29,39 +26,19 @@ window.onbeforeunload = function(event){
 
 // 是否保存
 $('.add-info').click(function(){
-	// console.log('此处ajax请求')
 	addRepair();
 })
 
 var postData = {
-	"mobile": "183",
-	"password": "001",
-	'factoryId': '1',
-	'pageSize' : '10',
-	'pageNo' : '1'
+	mobile : '13070552899',
+	password : '123456',
+	factoryId : 18
 };
-postData = (function(obj){ // 转成post需要的字符串.
-	var str = "";
-
-	for(var prop in obj){
-	    str += prop + "=" + obj[prop] + "&"
-	}
-	return str;
-})(postData);
-
+postData.mobile = $.cookie.get('mobile');
+postData.password = $.cookie.get('password');
+postData.factoryId = $.cookie.get('factoryId');
 
 function addRepair(){
-	// $.ajax({ type : 'post',
-	// 	dataType : 'json',
-	// 	url :'http://139.129.222.154:8080/car/app/car/factory/queryFactoryWorkerList.do',
-	// 	data: 'mobile=183&password=qqq',
-	// 	success : function(data){
-	// 		console.log(data);
-	// 	},
-	// 	error : function(data){
-	// 		console.log(data);
-	// 	}
-	// })
 	$.post(
 		'http://139.129.222.154:8080/car/app/car/factory/queryRepareTypeList.do',
 		postData,

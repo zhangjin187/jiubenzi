@@ -34,25 +34,19 @@ $('.add-info').click(function(){
 })
 
 var postData = {
-	"mobile": "183",
-	"password": "001",
-	'factoryId': '16',
-	'pageSize' : '10',
-	'pageNo' : '1'
+	mobile : '13070552899',
+	password : '123456',
+	factoryId : 18
 };
-
+postData.mobile = $.cookie.get('mobile');
+postData.password = $.cookie.get('password');
+postData.factoryId = $.cookie.get('factoryId');
 
 function addstaff(){
 	postData.name = $('.staff-name').val();
 	postData.mobile = $('.staff-tel').val();
-	postData1 = (function(obj){ // 转成post需要的字符串.
-		var str = "";
-		for(var prop in obj){
-		    str += prop + "=" + obj[prop] + "&"
-		}
-		return str;
-	})(postData);
-	$.post( 'http://139.129.222.154:8080/car/app/car/factory/saveRepareFeeItem.do', postData1, function(data){
+	console.log(postData)
+	$.post( 'http://139.129.222.154:8080/car/app/car/factory/saveWorker.do', postData, function(data){
 		// data = JSON.parse(data)
 		if(!data.code){
 			data = JSON.parse(data)

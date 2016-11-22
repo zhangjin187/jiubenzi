@@ -7,7 +7,7 @@
 // 	$(this).parent().removeClass('inError');
 
 // });
-var username,phonenumber,verificationcode,password,password1,checkbox;
+var username,phonenumber,verificationcode,password,password1,checkbox,postData={};
 // 判断用户名
 $('table input[name=username]').blur(function(){
 	// console.log(this.value)
@@ -31,6 +31,7 @@ $('table input[name=phonenumber]').blur(function(){
 	}
 	$(this).parent().removeClass('inError');
 	phonenumber = true;
+	postData.mobile = this.value;
 });
 
 $('table button[name=verificationcode]').click(function(){
@@ -41,6 +42,22 @@ $('table button[name=verificationcode]').click(function(){
 		phonenumber = false;
 		return;
 	}
+	$.post(
+		'http://139.129.222.154:8080/car/app/car/msg/sendMsg.do',
+		postData,
+		function(data){
+			if(!data.code){
+				data = JSON.parse(data)
+			}
+			if(data.code == '0000'){
+				console.log(data,data.data);
+				// window.location.href = 'check-staff.html';
+			}else{
+				// alert(data.errorMessage)
+				console.log(data,data.errorMessage);
+			}
+		}
+	)
 });
 
 // 判断verificationcode
@@ -58,6 +75,7 @@ $('table input[name=verificationcode]').blur(function(){
 	}
 	$(this).parent().removeClass('inError');
 	verificationcode = true;
+	postData.code = this.value;
 });
 
 // 判断password
@@ -85,18 +103,40 @@ $('table input[name=password1]').blur(function(){
 	}
 	$(this).parent().removeClass('inError');
 	password1 = true;
+	postData.password = this.value;
 });
+$('table input[name=checked]').change(function(){
+	$('table input[name=checked]').parent().parent().css('color','#000')
+})
 
 $('table input[name=submit]').click(function(){
-	// console.log(this);
 	$('table input').blur();
 	// console.log()
-	checkbox = $('table input[name=checked]').prop('checked')
+	checkbox = $('table input[name=checked]').prop('checked');
+	if(!checkbox){
+		$('table input[name=checked]').parent().parent().css('color', 'red');
+	}
 	// console.log(checkbox)
 	password1 = ($('table input[name=password1]').val() == $('table input[name=password]').val());
 	// console.log(password1)
-	if(username && phonenumber && verificationcode && password && password1 && checkbox){
-		console.log('success')
+	if(phonenumber && verificationcode && password && password1 && checkbox){
+		// console.log('success')
+		$.post(
+			'http://139.129.222.154:8080/car/app/car/factory/saveFactory.do',
+			postData,
+			function(data){
+				if(!data.code){
+					data = JSON.parse(data)
+				}
+				if(data.code == '0000'){
+					console.log(data,data.data);
+					// window.location.href = 'check-staff.html';
+				}else{
+					// alert(data.errorMessage)
+					console.log(data,data.errorMessage);
+				}
+			}
+		)
 	}
 	// testpost()
 })
